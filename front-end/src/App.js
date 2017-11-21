@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
+import StartPage from './components/startpage.js';
 
 class App extends Component {
   render() {
     return (
-      <div class="container">
-        <h3>Hello World</h3>
-      </div>
+      <StartPage />
     );
   }
 }

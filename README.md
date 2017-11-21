@@ -50,5 +50,5 @@ Front-end
 Technologies
   - React
   - Node
-  - Mongo
-  - MaterializeCSS or Bootstrap?
+  - MongoDB
+  - MaterializeCSS

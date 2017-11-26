@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import {Navbar, NavItem, Icon} from 'react-materialize'
+import Nav from './navigation.js'
 
 export default class Home extends Component {
   render(props){
     return(
       <div>
-        <Navbar className="red darken-4" brand="Elbi Quiz" right>
-        	<NavItem href='#'>Manage</NavItem>
-        </Navbar>
+        <Nav />
 
         <div class="section no-pad-bot" id="index-banner">
           <div class="container">

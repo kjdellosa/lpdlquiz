@@ -8,13 +8,16 @@ export default class Home extends Component{
   render(props){
     return(
       <div>
-        <Col s={12} m={2}>
+        <Col s={12} m={12}>
         <div id="editmenu">
           <Collection>
             <CollectionItem>
               <p>
-              <Choice categories={this.props.categories}/>
+              <h6>Categories:</h6>
+              <Choice categories={this.props.categories}
+                      handler={this.props.handler}/>
               </p>
+              <h6>Options:</h6>
               <p>
               <input onClick={this.props.choice1} name="grp1" type="radio" id="r1" />
               <label for="r1">View</label>

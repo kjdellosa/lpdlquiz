@@ -50,7 +50,6 @@ exports.findAllHighscores = (req, res) => {
 
 exports.add = (req, res) => {
   const newCategory = new Category(req.body);
-
   newCategory.save((err, category) => {
     if (err) { res.send({}); }
     else {

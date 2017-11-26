@@ -1,28 +1,44 @@
 import React, { Component } from 'react';
-import {Dropdown, NavItem, Button} from 'react-materialize';
+import {Row, Input} from 'react-materialize';
 // <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-
 
 export default class Home extends Component{
   constructor(props){
-      super(props);
+    super(props);
 
       this.state = {
-        categories: this.props.categories
+        categories: []
       }
+
+      this.getCategories = this.getCategories.bind(this);
+      this.getCategories();
+  }
+
+  getCategories(){
+    fetch('http://localhost:3001/quiz/find-all-categories')
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      console.log(result);
+      this.setState({categories: result});
+    })
   }
 
   render(props){
     return(
       <div>
-      <Dropdown
-      trigger={<Button class="red darken-4">Category</Button>}
-      >{
+      <Row>{
         this.state.categories.map((category) => {
           return (
-            <NavItem>{category}</NavItem>)
+            <Input name="g1"
+                   value={category.categoryName}
+                   label={category.categoryName}
+                   type="radio"
+                   onClick={this.props.handler}/>
+          )
         })
-      }</Dropdown>
+      }</Row>
       </div>
     )
   }

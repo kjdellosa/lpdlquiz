@@ -10,18 +10,18 @@ export default class Home extends Component{
       <div>
       <Col s={12} m={3}>
         <div class="card">
-          <div class="card-content">
-            <h5>Question</h5>
+          <div class="card-content" key={this.props._id}>
+            <h5>{this.props.question}</h5>
             <h6>Choices</h6>
-            <ul>
-              <li>Choice A</li>
-              <li>Choice B</li>
-              <li>Choice C</li>
-              <li>Choice D</li>
-            </ul>
+            <ol type="A">
+              <li>{this.props.choices[0]}</li>
+              <li>{this.props.choices[1]}</li>
+              <li>{this.props.choices[2]}</li>
+              <li>{this.props.choices[3]}</li>
+            </ol>
             <h6>Answer</h6>
             <ul>
-              <li>Choice A</li>
+              <li>{this.props.answer}</li>
             </ul>
           </div>
         </div>

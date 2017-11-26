@@ -20,16 +20,20 @@ export default class Home extends Component{
       edit: false,
       add: false,
       delete: false,
-      categories: []
+      categories: [],
+      questions: [],
+      curr_category: ""
     }
 
     this.getCategories = this.getCategories.bind(this);
+    this.getQuestions = this.getQuestions.bind(this);
     this.handleChoice1 = this.handleChoice1.bind(this);
     this.handleChoice2 = this.handleChoice2.bind(this);
     this.handleChoice3 = this.handleChoice3.bind(this);
     this.handleChoice4 = this.handleChoice4.bind(this);
-    console.log("hello world");
+    this.handleCategoryChoice = this.handleCategoryChoice.bind(this);
     this.getCategories();
+    this.getQuestions();
   }
 
   getCategories(){
@@ -38,8 +42,19 @@ export default class Home extends Component{
       return response.json();
     })
     .then((result) => {
-      console.log("wattahell");
+      console.log(result);
       this.setState({categories: result});
+    })
+  }
+
+  getQuestions(){
+    fetch('http://localhost:3001/quiz/find-all-questions')
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      console.log(result);
+      this.setState({questions: result});
     })
   }
 
@@ -83,6 +98,14 @@ export default class Home extends Component{
     });
   }
 
+  handleCategoryChoice(e){
+    var c = {c: e.target.value}
+    console.log(c);
+    this.setState({
+      curr_category: e.target.value
+    });
+  }
+
   render(props){
     if(this.state.view){
       return(
@@ -96,8 +119,23 @@ export default class Home extends Component{
                           choice2={this.handleChoice2}
                           choice3={this.handleChoice3}
                           choice4={this.handleChoice4}
-                          categories={this.state.categories}/>
-              <ViewCard />
+                          handler={this.handleCategoryChoice}
+              />
+              {
+                this.state.questions.map((question) => {
+                  if(this.state.curr_category == question.category){
+                    return(
+                      <ViewCard _id={question._id}
+                                question={question.question}
+                                category={question.category}
+                                difficulty={question.difficulty}
+                                choices={question.choices}
+                                answer={question.answer}
+                      />
+                    )
+                  }
+                })
+              }
             </Row>
           </main>
 
@@ -116,8 +154,23 @@ export default class Home extends Component{
                           choice2={this.handleChoice2}
                           choice3={this.handleChoice3}
                           choice4={this.handleChoice4}
-                          categories={this.state.categories}/>
-              <EditCard />
+                          handler={this.handleCategoryChoice}
+              />
+              {
+                this.state.questions.map((question) => {
+                  if(this.state.curr_category == question.category){
+                    return(
+                      <EditCard _id={question._id}
+                                question={question.question}
+                                category={question.category}
+                                difficulty={question.difficulty}
+                                choices={question.choices}
+                                answer={question.answer}
+                      />
+                    )
+                  }
+                })
+              }
             </Row>
           </main>
 
@@ -137,7 +190,21 @@ export default class Home extends Component{
                           choice3={this.handleChoice3}
                           choice4={this.handleChoice4}
                           categories={this.state.categories}/>
-              <DeleteCard />
+              {
+                this.state.questions.map((question) => {
+                  if(this.state.curr_category == question.category){
+                    return(
+                      <DeleteCard _id={question._id}
+                                question={question.question}
+                                category={question.category}
+                                difficulty={question.difficulty}
+                                choices={question.choices}
+                                answer={question.answer}
+                      />
+                    )
+                  }
+                })
+              }
             </Row>
           </main>
 

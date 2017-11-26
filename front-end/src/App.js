@@ -9,8 +9,7 @@ class App extends Component {
       <Router>
         <div id="content-container">
           <Route exact={true} path="/" component={StartPage}/>
-          <Route exact={true} path="/manage" component={Manage}/>
-
+          <Route exact={true} path="/questions/edit" component={Manage}/>
         </div>
       </Router>
     );

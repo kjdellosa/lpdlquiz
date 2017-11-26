@@ -24,7 +24,7 @@ export default class Home extends Component{
         </div>
         <div class="footer-copyright">
           <div class="container">
-          2017-2018
+            2017-2018
           </div>
         </div>
         </footer>

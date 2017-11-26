@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
-import {Card, CardTitle, Row, Col, CardPanel, Collapsible, CollapsibleItem,
-Input, Collection, CollectionItem} from 'react-materialize';
-
+import {Col} from 'react-materialize';
 
 // <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
 

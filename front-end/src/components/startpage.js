@@ -6,7 +6,7 @@ export default class Home extends Component {
     return(
       <div>
         <Navbar className="red darken-4" brand="Elbi Quiz" right>
-        	<NavItem href='#'>Manage</NavItem>
+          <NavItem href='#'>Manage</NavItem>
         </Navbar>
 
         <div class="section no-pad-bot" id="index-banner">

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import StartPage from './components/startpage.js';
-import EditQuestions from './components/edit-questions.js';
-import AddQuestions from './components/edit-questions.js';
+import ManageQuestions from './components/questions/manage-questions.js';
 
 class App extends Component {
   render() {
@@ -10,8 +9,7 @@ class App extends Component {
       <Router>
         <div id="content-container">
           <Route exact={true} path="/" component={StartPage}/>
-          <Route exact={true} path="/questions/edit" component={EditQuestions}/>
-          <Route exact={true} path="/questions/add" component={AddQuestions}/>
+          <Route exact={true} path="/manage/questions" component={ManageQuestions}/>
         </div>
       </Router>
     );

@@ -20,13 +20,27 @@ export default class Home extends Component{
       edit: false,
       add: false,
       delete: false,
-      categories: ["History", "Kainan", "Geography"]
+      categories: []
     }
 
+    this.getCategories = this.getCategories.bind(this);
     this.handleChoice1 = this.handleChoice1.bind(this);
     this.handleChoice2 = this.handleChoice2.bind(this);
     this.handleChoice3 = this.handleChoice3.bind(this);
     this.handleChoice4 = this.handleChoice4.bind(this);
+    console.log("hello world");
+    this.getCategories();
+  }
+
+  getCategories(){
+    fetch('http://localhost:3001/quiz/find-all-categories')
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      console.log("wattahell");
+      this.setState({categories: result});
+    })
   }
 
   handleChoice1(e){
@@ -81,7 +95,8 @@ export default class Home extends Component{
               <ManageMenu choice1={this.handleChoice1}
                           choice2={this.handleChoice2}
                           choice3={this.handleChoice3}
-                          choice4={this.handleChoice4}/>
+                          choice4={this.handleChoice4}
+                          categories={this.state.categories}/>
               <ViewCard />
             </Row>
           </main>
@@ -100,7 +115,8 @@ export default class Home extends Component{
               <ManageMenu choice1={this.handleChoice1}
                           choice2={this.handleChoice2}
                           choice3={this.handleChoice3}
-                          choice4={this.handleChoice4}/>
+                          choice4={this.handleChoice4}
+                          categories={this.state.categories}/>
               <EditCard />
             </Row>
           </main>

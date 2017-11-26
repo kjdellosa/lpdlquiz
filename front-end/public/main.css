@@ -28,3 +28,23 @@
     width: 20%;
   }
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+#pagecontent{
+  height: 500px;
+}
+
+#ManageMenu{
+  width: 300px;
+  height: 100%;
+  padding-top: 0;
+}

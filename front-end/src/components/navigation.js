@@ -6,7 +6,7 @@ export default class Home extends Component{
     return(
       <div>
       <Navbar className="red darken-2" brand="Elbi Quiz" right>
-        <NavItem href='#'>Manage</NavItem>
+        <NavItem href="/manage">Manage</NavItem>
       </Navbar>
       </div>
     )

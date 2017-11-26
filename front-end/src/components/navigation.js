@@ -7,13 +7,9 @@ export default class Home extends Component{
       <header>
 
       <ul id="dropdown1" class="dropdown-content">
-        <li><a href="/questions/edit" class="black-text text-darken-1">View/Edit Questions</a></li>
-        <li><a href="#!" class="black-text text-darken-1">Add Question</a></li>
-        <li><a href="#!" class="black-text text-darken-1">Delete Question</a></li>
-        <li class="divider">Dry your tears</li>
-        <li><a href="#!" class="black-text text-darken-1">View/Edit Categories</a></li>
-        <li><a href="#!" class="black-text text-darken-1">Add Category</a></li>
-        <li><a href="#!" class="black-text text-darken-1">Delete Category</a></li>
+        <li><a href="/questions/edit" class="black-text text-darken-1">Questions</a></li>
+        <li class="divider"></li>
+        <li><a href="#!" class="black-text text-darken-1">Categories</a></li>
       </ul>
 
       <nav class="red darken-3">

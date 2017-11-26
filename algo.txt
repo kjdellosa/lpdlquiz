@@ -1,0 +1,4 @@
+Algo:
+
+select 3 categories ->save all questions from db in an array(pool_of_question) with categories chosen by user-> select # of question -> cut array to number of question -> start of quiz->saves user's answer-> stops until all question is exhausted -> checks answers and computes for score -> display score -> display highscore
+

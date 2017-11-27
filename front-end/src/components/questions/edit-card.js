@@ -88,21 +88,45 @@ export default class Home extends Component{
   }
 
   handleSubmit(e){
-    let id = this.state._id
+    var id = {_id: this.state._id}
     console.log(id);
-    // fetch('http://localhost:3001/quiz/delete-question', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(id)
-    // }).then((response) => {
-    //   return response.json();
-    // }).then((result) => {
-    //   console.log(result);
-    // })
-    // e.preventDefault();
+    fetch('http://localhost:3001/quiz/delete-question', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(id)
+    }).then((response) => {
+      return response.json();
+    }).then((result) => {
+      console.log(result);
+    })
+
+    var edited = {
+      question: this.state.question,
+      category: this.state.category,
+      difficulty: this.state.difficulty,
+      choices: this.state.choices,
+      answer: this.state.answer
+    }
+    fetch('http://localhost:3001/quiz/add-question', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(edited)
+    }).then((response) => {
+      return response.json();
+      this.props.refresh;
+    });
+
+    this.setState({
+      enableEdit: false
+    })
+
+    e.preventDefault();
   }
 
   render(props){
@@ -121,21 +145,21 @@ export default class Home extends Component{
                 <Collection >
                 <CollectionItem>
                 <h6>Difficulty</h6>
-                <Input name="g1"
+                <Input name="g5"
                        value="Easy"
                        label="Easy"
                        type="radio"
                        onClick={this.handleDifficultyChoice}
                 />
 
-                <Input name="g1"
+                <Input name="g5"
                        value="Medium"
                        label="Medium"
                        type="radio"
                        onClick={this.handleDifficultyChoice}
                 />
 
-                <Input name="g1"
+                <Input name="g5"
                        value="Hard"
                        label="Hard"
                        type="radio"

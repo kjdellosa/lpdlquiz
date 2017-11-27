@@ -169,6 +169,7 @@ export default class Home extends Component{
                                 difficulty={question.difficulty}
                                 choices={question.choices}
                                 answer={question.answer}
+                                refresh={this.getQuestions}
                       />
                     )
                   }

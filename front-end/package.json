@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "materialize-css": "^0.100.2",
+    "node-fetch": "^1.7.3",
+    "randomize": "0.0.4",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-materialize": "^1.1.0",

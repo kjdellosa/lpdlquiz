@@ -9,6 +9,7 @@ const DB_URL = 'mongodb://localhost/quizcon';
 mongoose.Promise = global.Promise;
 mongoose.connect(DB_URL);
 
+
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Credentials', 'true');

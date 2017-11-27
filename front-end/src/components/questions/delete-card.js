@@ -12,6 +12,10 @@ export default class Home extends Component{
         <div class="card">
           <div class="card-content" key={this.props._id}>
             <h5>{this.props.question}</h5>
+            <h6>Difficulty</h6>
+              <ul>
+                <li>{this.props.difficulty}</li>
+              </ul>
             <h6>Choices</h6>
             <ol type="A">
               <li>{this.props.choices[0]}</li>

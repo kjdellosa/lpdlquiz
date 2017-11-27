@@ -1,6 +1,5 @@
 db.quizcon.questions.insertMany([
-	{
-		_id: 1,
+	{	
 		question: "Sino ang sumulat ng UP Naming Mahal?",
 		category: "History",
 		difficulty: "Easy",
@@ -8,7 +7,6 @@ db.quizcon.questions.insertMany([
 		answer: "Nicanor Abelardo"
 	},
 	{
-		_id: 2,
 		question: "Sino ang sumulat ng UP Beloved?",
 		category: "History",
 		difficulty: "Easy",
@@ -16,7 +14,6 @@ db.quizcon.questions.insertMany([
 		answer: "Teogenes Velez"
 	},
 	{
-		_id: 3,
 		question: "Sino ang gumawa ng SystemOne?",
 		category: "History",
 		difficulty: "Easy",
@@ -24,7 +21,6 @@ db.quizcon.questions.insertMany([
 		answer: "Sir Rommel Bulalacao"
 	},
 	{
-		_id: 4,
 		question: "Saan matatagpuan ang Foundation Site ng UPLB?",
 		category: "History",
 		difficulty: "Easy",
@@ -32,7 +28,6 @@ db.quizcon.questions.insertMany([
 		answer: "Tapat ng City Hall"
 	},
 	{
-		_id: 5,
 		question: "Sino ang nagdisenyo at gumawa kay Pegaraw?",
 		category: "History",
 		difficulty: "Easy",
@@ -40,7 +35,6 @@ db.quizcon.questions.insertMany([
 		answer: "Napoleon Abueva"
 	},
 	{
-		_id: 6,
 		question: "Sino ang unang UP President?",
 		category: "History",
 		difficulty: "Medium",
@@ -48,7 +42,6 @@ db.quizcon.questions.insertMany([
 		answer: "Murray S. Bartlett"
 	},
 	{
-		_id: 7,
 		question: "Ano ang unang pangalan ng CAS building?",
 		category: "History",
 		difficulty: "Medium",
@@ -56,7 +49,6 @@ db.quizcon.questions.insertMany([
 		answer: "UPCA Library"
 	},
 	{
-		_id: 8,
 		question: "Ilan ang unang professors at mga estudyante ng UPLB?",
 		category: "History",
 		difficulty: "Medium",
@@ -64,7 +56,6 @@ db.quizcon.questions.insertMany([
 		answer: "5, 21"
 	},
 	{
-		_id: 9,
 		question: "Ilang oras ginawa ang UP Naming Mahal?",
 		category: "History",
 		difficulty: "Medium",
@@ -72,7 +63,6 @@ db.quizcon.questions.insertMany([
 		answer: "1"
 	},
 	{
-		_id: 10,
 		question: "Kailan isinapubliko ang Oblation?",
 		category: "History",
 		difficulty: "Medium",
@@ -80,7 +70,6 @@ db.quizcon.questions.insertMany([
 		answer: "1939"
 	},
 	{
-		_id: 11,
 		question: "When was UPLB established?",
 		category: "History",
 		difficulty: "Hard",
@@ -88,7 +77,6 @@ db.quizcon.questions.insertMany([
 		answer: "March 6, 1909"
 	},
 	{
-		_id: 12,
 		question: "Sino ang unang dean ng UPLB?",
 		category: "History",
 		difficulty: "Hard",
@@ -96,7 +84,6 @@ db.quizcon.questions.insertMany([
 		answer: "Edwin Copeland"
 	},
 	{
-		_id: 13,
 		question: "Kailan naging autonomous campus ang UPLB?",
 		category: "History",
 		difficulty: "Hard",
@@ -104,7 +91,6 @@ db.quizcon.questions.insertMany([
 		answer: "November 20, 1972"
 	},
 	{
-		_id: 14,
 		question: " Kailan unang kinanta UP beloved sa harap ng UP audience?",
 		category: "History",
 		difficulty: "Hard",
@@ -112,7 +98,6 @@ db.quizcon.questions.insertMany([
 		answer: "1972"
 	},
 	{
-		_id: 15,
 		question: "Kailan ipinagawa kay Guillermo ang Oblation?",
 		category: "History",
 		difficulty: "Hard",

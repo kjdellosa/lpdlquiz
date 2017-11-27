@@ -48,12 +48,61 @@ exports.findAllHighscores = (req, res) => {
 
 }
 
-exports.add = (req, res) => {
+exports.addcategory = (req, res) => {
   const newCategory = new Category(req.body);
+
   newCategory.save((err, category) => {
     if (err) { res.send({}); }
     else {
       res.json(category);
+    }
+  });
+}
+
+exports.addquestion = (req, res) => {
+  const newQuestion = new Question(req.body);
+
+  newQuestion.save((err, question) => {
+    if (err) { res.send({}); }
+    else {
+      res.json(question);
+    }
+  });
+}
+
+exports.findAllQuestionsByCategory = (req, res) => {
+  const category = req.params.category;
+
+  Question.find({category}, (err, questions) => {
+    if (err) {
+      console.log(err);
+      res.send({});
+    } else {
+      res.send(questions);
+    }
+  });
+}
+
+exports.deletequestion = (req, res) => {
+  const _id = req.body._id;
+
+  Question.remove({ _id }, (err) => {
+    if (err) {
+      res.send(false);
+    } else {
+      res.send(true);
+    }
+  });
+}
+
+exports.deletecategory = (req, res) => {
+  const _id = req.body._id;
+
+  Question.remove({ _id }, (err) => {
+    if (err) {
+      res.send(false);
+    } else {
+      res.send(true);
     }
   });
 }

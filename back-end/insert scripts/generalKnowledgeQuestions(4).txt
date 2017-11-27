@@ -1,6 +1,5 @@
 db.quizcon.questions.insertMany([
-	{
-		_id: 46,
+	{	
 		question: "Ano ang unang pangalan ng UPLB?",
 		category: "General Knowledge",
 		difficulty: "Easy",
@@ -8,7 +7,6 @@ db.quizcon.questions.insertMany([
 		answer: "UP College of Agriculture"
 	},
 	{
-		_id: 47,
 		question: "Ilang Maria sculptures ang makikita sa loop ng UPLB Campus?",
 		category: "General Knowledge",
 		difficulty: "Easy",
@@ -16,7 +14,6 @@ db.quizcon.questions.insertMany([
 		answer: "Tatlo"
 	},
 	{
-		_id: 48,
 		question: "Anong mayroon sa Baker Hall 5:00 pm TTh?",
 		category: "General Knowledge",
 		difficulty: "Easy",
@@ -24,7 +21,6 @@ db.quizcon.questions.insertMany([
 		answer: "Zumba"
 	},
 	{
-		_id: 49,
 		question: "Anong oras nagsasara ang Raymundo Gate?",
 		category: "General Knowledge",
 		difficulty: "Easy",
@@ -32,7 +28,6 @@ db.quizcon.questions.insertMany([
 		answer: "11pm"
 	},
 	{
-		_id: 50,
 		question: "Sa anong mga oras nag-aalarm ang UPF?",
 		category: "General Knowledge",
 		difficulty: "Easy",
@@ -40,7 +35,6 @@ db.quizcon.questions.insertMany([
 		answer: "8AM, 1PM, 5PM"
 	},
 	{
-		_id: 51,
 		question: "Ilang steps mayroon ang Nihon Koen?",
 		category: "General Knowledge",
 		difficulty: "Medium",
@@ -48,7 +42,6 @@ db.quizcon.questions.insertMany([
 		answer: "125 steps"
 	},
 	{
-		_id: 52,
 		question: "Ano ang iba pang tawag sa Oblation Run?",
 		category: "General Knowledge",
 		difficulty: "Medium",
@@ -56,7 +49,6 @@ db.quizcon.questions.insertMany([
 		answer: "Ritual Dance of the Brave"
 	},
 	{
-		_id: 53,
 		question: "Ilan ang ulo ng kalabaw sa CPark?",
 		category: "General Knowledge",
 		difficulty: "Medium",
@@ -64,7 +56,6 @@ db.quizcon.questions.insertMany([
 		answer: "Isa"
 	},
 	{
-		_id: 54,
 		question: "Anong tula ni Rizal ang naging basehan ng paggawa sa Oblation?",
 		category: "General Knowledge",
 		difficulty: "Medium",
@@ -72,7 +63,6 @@ db.quizcon.questions.insertMany([
 		answer: "Mi Ultimo Adios"
 	},
 	{
-		_id: 55,
 		question: "Ano ang isinisimbolo ni Oble?",
 		category: "General Knowledge",
 		difficulty: "Medium",
@@ -80,7 +70,6 @@ db.quizcon.questions.insertMany([
 		answer: "Ignorance, Nationalistic self-offering"
 	},
 	{
-		_id: 56,
 		question: "Ilan ang bells ng Carillion Tower?",
 		category: "General Knowledge",
 		difficulty: "Hard",
@@ -88,7 +77,6 @@ db.quizcon.questions.insertMany([
 		answer: "37"
 	},
 	{
-		_id: 57,
 		question: "Ilan ang linya ng pedestrian lane na nagdurugtong sa waiting shed at CHE building?",
 		category: "General Knowledge",
 		difficulty: "Hard",
@@ -96,7 +84,6 @@ db.quizcon.questions.insertMany([
 		answer: "28 lines"
 	},
 	{
-		_id: 58,
 		question: "Ano pa ang ibang pangalan ni Pegaraw?",
 		category: "General Knowledge",
 		difficulty: "Hard",
@@ -104,7 +91,6 @@ db.quizcon.questions.insertMany([
 		answer: "Carasus"
 	},
 	{
-		_id: 59,
 		question: "Kailan pinalitan ang pangalan ng UPLB mula UPCA?",
 		category: "General Knowledge",
 		difficulty: "Hard",
@@ -112,11 +98,10 @@ db.quizcon.questions.insertMany([
 		answer: "1970"
 	},
 	{
-		_id: 60,
 		question: "Anong dahon ang nasa paanan ni Oble?",
 		category: "General Knowledge",
 		difficulty: "Hard",
 		choices: ["Dahon ng sampaguita", "Kataka taka", "Abaca", "Maple leaf"],
 		answer: "Kataka taka"
 	}
-]);
+])

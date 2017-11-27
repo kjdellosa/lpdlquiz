@@ -8,6 +8,7 @@ import ManageMenu from './manage-menu.js';
 import DeleteCard from './delete-card.js';
 import ViewCard from './view-card.js';
 import EditCard from './edit-card.js';
+import AddCard from './add-question.js';
 
 // <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
 
@@ -16,7 +17,7 @@ export default class Home extends Component{
     super(props);
 
     this.state = {
-      view: true,
+      view: false,
       edit: false,
       add: false,
       delete: false,
@@ -120,10 +121,11 @@ export default class Home extends Component{
                           choice3={this.handleChoice3}
                           choice4={this.handleChoice4}
                           handler={this.handleCategoryChoice}
+                          categories={this.state.categories}
               />
               {
                 this.state.questions.map((question) => {
-                  if(this.state.curr_category == question.category){
+                  if(this.state.curr_category === question.category){
                     return(
                       <ViewCard _id={question._id}
                                 question={question.question}
@@ -155,10 +157,11 @@ export default class Home extends Component{
                           choice3={this.handleChoice3}
                           choice4={this.handleChoice4}
                           handler={this.handleCategoryChoice}
+                          categories={this.state.categories}
               />
               {
                 this.state.questions.map((question) => {
-                  if(this.state.curr_category == question.category){
+                  if(this.state.curr_category === question.category){
                     return(
                       <EditCard _id={question._id}
                                 question={question.question}
@@ -189,10 +192,12 @@ export default class Home extends Component{
                           choice2={this.handleChoice2}
                           choice3={this.handleChoice3}
                           choice4={this.handleChoice4}
-                          categories={this.state.categories}/>
+                          handler={this.handleCategoryChoice}
+                          categories={this.state.categories}
+              />
               {
                 this.state.questions.map((question) => {
-                  if(this.state.curr_category == question.category){
+                  if(this.state.curr_category === question.category){
                     return(
                       <DeleteCard _id={question._id}
                                 question={question.question}
@@ -205,6 +210,47 @@ export default class Home extends Component{
                   }
                 })
               }
+            </Row>
+          </main>
+
+          <Footer/>
+        </div>
+      )
+    }else if(this.state.add){
+      return(
+        <div>
+          <Nav/>
+          <main>
+            <br />
+            <h5 class="center-align">Manage Questions</h5>
+            <Row>
+              <ManageMenu choice1={this.handleChoice1}
+                          choice2={this.handleChoice2}
+                          choice3={this.handleChoice3}
+                          choice4={this.handleChoice4}
+                          handler={this.handleCategoryChoice}
+                          categories={this.state.categories}
+              />
+              <AddCard category={this.state.curr_category} />
+            </Row>
+          </main>
+
+          <Footer/>
+        </div>
+      )
+    }else{
+      return(
+        <div>
+          <Nav/>
+          <main>
+            <br />
+            <h5 class="center-align">Manage Questions</h5>
+            <Row>
+              <ManageMenu choice1={this.handleChoice1}
+                          choice2={this.handleChoice2}
+                          choice3={this.handleChoice3}
+                          choice4={this.handleChoice4}
+                          categories={this.state.categories}/>
             </Row>
           </main>
 
